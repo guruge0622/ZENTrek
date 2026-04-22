@@ -1,77 +1,59 @@
-📌 ZENTrek – Tour Guide Booking System
-
-## 🌍 Overview
-
-Zentrek is a web-based tour guide booking system designed to connect tourists with local tour guides in Sri Lanka. The platform allows users to explore guide profiles, check availability, make bookings, and manage reservations through a simple and user-friendly interface.
-
-This project was developed as part of an academic coursework to demonstrate skills in web development using HTML, CSS, PHP, and MySQL.
-
-## 🎯 Key Features
-
-- Guide profile browsing (Guide Bios page)
-- Check guide availability
-- Tour booking system
-- Payment system integration (basic structure)
 # ZENTrek
 
-ZENTrek is a web-based tour guide booking system that connects tourists with local tour guides in Sri Lanka. This repository contains the site source (HTML/CSS/JS) and a PHP backend intended for deployment on a local XAMPP/Apache environment. It was created as an academic project to demonstrate full‑stack web development with PHP and MySQL.
-## Overview
+ZENTrek is a tour guide booking system built with HTML/CSS/JavaScript for the frontend and PHP + MySQL for the backend. It is designed for local deployment (XAMPP/Apache) and was developed as an academic project to demonstrate practical full‑stack concepts.
 
-A compact summary of the repository, how to run it locally, and how to configure the database and application settings.
+## Summary
 
-## Contents
+- Browse guide profiles and bios
+- Check guide availability and make bookings
+- Manage bookings (view/cancel)
+- Basic payment workflow structure
+- Reviews and feedback stored in MySQL
 
-- Source files: HTML, PHP, CSS, JavaScript
-- Database schema: `database/zentrek.sql`
-- Example configuration: `config.example.php`
+## Tech stack
 
-## Features
-
-- Guide profile browsing
-- Availability checks and bookings
-- Booking management (view/cancel)
-- Basic payment flow structure
-- Reviews and feedback stored in the database
-- User authentication (login/signup)
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: PHP (PDO recommended)
+- Database: MySQL / MariaDB
 
 ## Requirements
 
-- PHP 7.4+ with PDO extension
+- PHP 7.4 or newer with PDO extension
 - MySQL or MariaDB
-- XAMPP or equivalent Apache+PHP development stack
+- XAMPP or similar Apache + PHP environment
 
-## Local installation
+## Quick start
 
-1. Install XAMPP and start Apache and MySQL.
-2. Place the project folder in your web root (example path):
+1. Install and run XAMPP (start Apache and MySQL).
+2. Copy the project into your web root, for example:
 
 ```powershell
 Copy-Item -Path . -Destination 'C:\xampp\htdocs\zentrek' -Recurse
 ```
 
-3. Import the SQL schema:
+3. Create a database (e.g., `zentrek`) and import the schema:
 
 ```bash
 mysql -u root -p zentrek < database/zentrek.sql
 ```
 
-4. Configure database connection using `config.example.php` (copy to `config.php` and set credentials).
-5. Open http://localhost/zentrek/ in your browser.
+4. Copy `config.example.php` to `config.php` and update DB credentials.
+5. Open the site at: http://localhost/zentrek/
 
 ## Configuration
 
-Use `config.example.php` as the template for `config.php`. The example shows PDO usage and recommended settings.
+Use `config.example.php` as the template. The example includes PDO connection usage and recommended settings. Do not commit `config.php` with sensitive credentials.
 
 ## Contributing
 
-Contributions are welcome. Please open issues for bugs or feature requests. Create pull requests from feature branches for code changes.
+Contributions are welcome. Open an issue to discuss changes, then submit a pull request from a feature branch.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License — see `LICENSE`.
 
 ## Contact
 
-Repository owner: https://github.com/guruge0622
+https://github.com/guruge0622
 
 
