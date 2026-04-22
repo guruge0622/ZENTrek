@@ -12,90 +12,135 @@ This project was developed as part of an academic coursework to demonstrate skil
 - Check guide availability
 - Tour booking system
 - Payment system integration (basic structure)
-- Booking management (view & cancel bookings)
-- Review and feedback system (stored in database)
-- User login system
-- Admin-friendly data structure using MySQL
+# ZENTrek — Tour Guide Booking System
 
-## 🛠️ Technologies Used
+ZENTrek is a lightweight web application for connecting tourists with local tour guides in Sri Lanka. It demonstrates a complete HTML/CSS/JS frontend with a PHP backend and a MySQL database, built as an academic project to showcase full‑stack web development concepts.
+
+---
+
+## Table of contents
+
+1. [Key features](#key-features)
+2. [Tech stack](#tech-stack)
+3. [Project structure](#project-structure)
+4. [Prerequisites](#prerequisites)
+5. [Install & run](#install--run)
+6. [Database setup](#database-setup)
+7. [Configuration example](#configuration-example)
+8. [Contributing](#contributing)
+9. [Future improvements](#future-improvements)
+10. [License & contact](#license--contact)
+
+---
+
+## Key features
+
+- Browse guide profiles (Guide Bios)
+- Check guide availability and book tours
+- Booking management (view / cancel)
+- Basic payment workflow structure
+- Reviews and feedback persisted in MySQL
+- User authentication (login / signup)
+
+## Tech stack
 
 - Frontend: HTML5, CSS3, JavaScript
-- Backend: PHP
+- Server: PHP (Apache/XAMPP)
 - Database: MySQL
-- Server: XAMPP (Apache + MySQL)
 
-## 📁 Project Structure
+## Project structure
 
+Top-level layout (representative):
+
+```
 zentrek/
-│
-├── index.php
-├── login.php
-├── register.php
-├── guide-bios.php
-├── availability.php
-├── booking.php
-├── manage_bookings.php
-├── payment.php
-│
-├── css/
-│   ├── style.css
-│   ├── availability.css
-│
-├── js/
-│   ├── script.js
-│
-├── images/
-│
-└── database/
-	└── zentrek.sql
+├─ index.php
+├─ Home.html
+├─ login.php
+├─ signup.php
+├─ guidebios.html
+├─ availability.php
+├─ processbooking.php
+├─ css/
+├─ js/
+└─ database/zentrek.sql
+```
 
-## 🗄️ Database
+See the repository root for the full list of pages and assets.
 
-The system uses a MySQL database to store:
+## Prerequisites
 
-- User information
-- Guide profiles
-- Bookings
-- Payments
-- Reviews and feedback
+- PHP (>=7.4) and Apache (included in XAMPP)
+- MySQL or MariaDB
+- Composer is not required (plain PHP project)
 
-Import the SQL file:
+## Install & run (local)
 
-`database/zentrek.sql`
+1. Install and start XAMPP (Apache + MySQL).
+2. Copy the project folder to your web root (example):
 
-into phpMyAdmin.
+```powershell
+Copy-Item -Path . -Destination 'C:\xampp\htdocs\zentrek' -Recurse
+```
 
-## 🚀 How to Run the Project Locally
+3. Import the SQL schema (see Database setup).
+4. Open in browser: http://localhost/zentrek/
 
-1. Install XAMPP
-2. Start Apache and MySQL
+## Database setup
 
-Move project folder to:
+1. Open phpMyAdmin (http://localhost/phpmyadmin) or use the MySQL client.
+2. Create a new database (e.g., `zentrek`).
+3. Import `database/zentrek.sql` from the repository.
 
-`C:\xampp\htdocs\zentrek`
-Import database using phpMyAdmin
+If using the MySQL CLI:
 
-Open browser and run:
+```bash
+mysql -u root -p zentrek < database/zentrek.sql
+```
 
-http://localhost/zentrek/
+## Configuration example
 
+Create a small config file (example `config.php`) and update DB credentials:
 
+```php
+<?php
+// config.php
+return [
+	'db_host' => '127.0.0.1',
+	'db_name' => 'zentrek',
+	'db_user' => 'root',
+	'db_pass' => '',
+];
+```
 
-## 📌 Project Purpose
+Include or require this config where needed and use PDO or mysqli to connect safely.
 
-This project was built to:
+## Contributing
 
-- Practice full-stack web development
-- Understand database-driven applications
-- Simulate a real-world booking system
-- Improve UI/UX design skills
+- Fork the repository and open a pull request for non-trivial changes.
+- For bug fixes or documentation updates, push to a feature branch and create a PR.
 
-## 📈 Future Improvements
+## Future improvements
 
-- Online payment gateway integration (PayPal/Stripe)
-- Real-time chat with guides
-- Advanced admin dashboard
-- Mobile responsive optimization
-- Google Maps integration for tour locations
+- Integrate a production payment gateway (Stripe/PayPal)
+- Add responsive/mobile-first UI improvements
+- Admin dashboard for guide & booking management
+- Google Maps for tour locations
+
+## License & contact
+
+This project is provided as-is for educational purposes. Add a license file if you intend to open-source it.
+
+For questions or collaboration, contact the repository owner via GitHub: https://github.com/guruge0622
+
+---
+
+If you'd like, I can:
+
+- add a `LICENSE` file (MIT/Apache)
+- include sample screenshots in `docs/` and update README with thumbnails
+- create `config.example.php` and a `.env` template
+
+Tell me which of these you'd prefer next.
 
 
