@@ -79,14 +79,7 @@ Open browser and run:
 
 http://localhost/zentrek/
 
-## 📸 Screenshots (Optional for GitHub)
 
-You can add screenshots like:
-
-- Home page
-- Guide listing page
-- Booking page
-- Availability page
 
 ## 📌 Project Purpose
 
@@ -105,6 +98,4 @@ This project was built to:
 - Mobile responsive optimization
 - Google Maps integration for tour locations
 
----
 
-If you want, I can add screenshots, database export, or a sample `.env`/config for DB connection.
